@@ -1,0 +1,79 @@
+html, body
+{
+    margin: 0px;
+    height: 100%;
+}
+
+header {
+    min-width: 100%;
+    height: 20%;
+    background-image: url(assets/IMG_6969.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    /*background-color: gray;*/
+}
+#pfb {
+    border-radius: 50%;
+    width: 30%;
+    max-width: 150px;
+    position: absolute;
+    top: 10%;
+    padding: 20px;
+}
+
+.link {
+    font-weight: 400;
+    color: rgb(76, 76, 107);
+}
+
+.alignBox {
+    margin: 00px 80px 0px 80px;
+}
+
+.textBox1 {
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    left: 20px;
+}
+
+.textBox2 {
+    padding: 0px 80px;
+    align-self: center;
+}
+
+.subText {
+    color: gray;
+}
+
+.subField {
+    padding: 10px 10px 10px 50px;
+}
+
+.favIcon {
+    border-radius: 5%;
+    max-width: 50px;
+    max-height: 50px;
+    position: absolute;
+    left: 140px;
+}
+
+.volWrapper .favIcon {
+    border-radius: 20%;
+    max-width: 30px;
+    margin-top: 10px;
+}
+
+h1 {
+    font-size: x-large;
+}
+
+h2 {
+    font-size: large;
+}
+
+h3 {
+    font-size: medium;
+}
