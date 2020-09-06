@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hjalmar S. Andersen sin CV</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" media="(max-width: 1300px)" href="responsive.css" id="printable">
+    <script>
+        function switchStyle() {
+            try {
+                var doc = document.getElementById('printable')
+                var m = doc.getAttribute("media");
+                if (m === "(max-width: 1300px)") {
+                    doc.setAttribute("media","all")
+                } else if (m === "all") {
+                    doc.setAttribute("media","(max-width: 1300px)")
+                }
+            } finally {
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
         <div class="shade">
             <div class="headerBox">
-                <img id="pfb" src="assets/DSC_0054-3.jpeg" alt="Profilbilde">
+                <img id="pfb" src="assets/DSC_0054-3.jpeg" alt="Profilbilde" onclick="switchStyle()">
                 <div class="textBox1">
-                    <div class="backgroundShade">
-                        <h1>Hjalmar Svenstrup Andersen</h1>Bergen, Hordaland <br> 
-                        <a class="link" href="tel:+47 479 05 198">+47 479 05 198</a> <br>
+                    <div class="rowBox">
+                        <h1>Hjalmar Svenstrup Andersen<div class="inner"></div>
+                        </h1>Bergen, Vestland <br> 
+                        <a class="link" href="tel:+47 479 05 198">+47 479 05 198</a>
                         <a class="link"  href="mail:hjalmar@hey.com">Hjalmar@hey.com</a> 
                     </div>
                 </div>
@@ -25,7 +40,7 @@
     <div class="alignBox">
         <div class="rowBox"><div class="textBox2">
             <div class="subField">
-                    <h1>Utdanning</h1>
+                    <h1>Utdanning<div class="inner"></div></h1>
                     <div class="colBox">
                         <img class="favIcon" src="assets/UiB-logo.jpeg" alt="UiB-logo">
                         <div class="rowBox">
@@ -40,13 +55,13 @@
         </div>
         <div class="textBox2">
             <div class="subField">
-                    <h1>Erfaring</h1>
+                    <h1>Erfaring<div class="inner"></div></h1>
                     <div class="rowBox">
                         <div class="colBox">
-                            <img class="favIcon" src="assets/ig.png" alt="igLogo">
+                            <img class="favIcon" src="assets/IG_grey.png" alt="igLogo">
                             <div class="rowBox">
                                 <div class="h2like">
-                                    <b>IslandGarden AS</b> ​​—​​ Fullstackutvikler <br>
+                                    <b>IslandGarden AS</b> ​​—​​ App og systemutvikler <br>
                                     <div class="subText">Bergen og Øygarden</div>
                                 </div>
                                 <br>
@@ -54,15 +69,19 @@
                             </div>
                         </div>
                         <div>
-                            <h3>Teknologier</h3>
-                            Flutter, Dart, Firebase, Node.js, RestAPI, Javascript/TypeScript, React, bash
-                            <h3>Prosjekter</h3>
-                            <p> Bolighjelperen(Flutter, Dart, Firebase, React, Javascript) <br>
-                                Sartor Vaktmester (Flutter, Dart, Firebase, React, Javascript)<br>
-                                Spillavhengighet Norge (Flutter, Dart, Firebase, React, Javascript)<br>
-                                DiaKom (Flutter, Dart, Firebase, React, TypeScript)<br>
-                                Poplar (Flutter, Dart, Firebase, React, TypeScript)
+                            <p>Gjennomførte en rekke prosjekter for selskaper på Vestlandet.<br>
+                            Hadde ansvar for å utarbeide, designe, planlegge og overse utviklingen av prosjekter, samt utviklingen av Flutter native apper.
                             </p>
+                            <h3>Teknologier:</h3>
+                            Flutter, Dart, Firebase, Node.js, RestAPI, Javascript/TypeScript, React.js
+                            <h3>Prosjekter:</h3>
+                            <ul>
+                                <li><b>Bolighjelperen: </b>System for forvaltning, drift og vedlikehold av sameier på Sartor.</li>
+                                <li><b>Vaktmesterhjelperen: </b>App for vaktmestere ved Sartor sameier.</li>
+                                <li><b>Spillavhengighet Norge: </b> Brukerregister for Spillavhengighet Norge.</li>
+                                <li><b>DiaKom: </b>En whitelabel løsning for intern dialog og informasjonsflyt i organisasjoner, bedrifter og idrettslag.</li>
+                                <li><b>Poplar: </b>Digitale rebusløp som læringsverktøy for barne- og ungdomsskoler.</li>
+                              </ul>
                         </div>
                     </div>
                     <br>
@@ -91,7 +110,7 @@
             <div class="textBox2">
                 <div class="volWrapper">
                         <div class="subField">
-                            <h1>Frivillig arbeid og verv</h1>
+                            <h1>Frivillig arbeid og verv<div class="inner"></div></h1>
                             <div class="rowBox">
                                 <div class="colBox">
                                     <img class="favIcon" src="assets/javazone.png" alt="logo">
@@ -148,5 +167,6 @@
             </div>
         </div>
     </div>
+    <footer></footer>
 </body>
 </html>
