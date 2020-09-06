@@ -6,26 +6,28 @@ html, body
 }
 
 header {
+    display: flex;
     min-width: 100%;
-    height: 15%;
+    height: 150px;
     background-image: url(assets/IMG_6969.jpg);
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
     background-position: center;
     /*background-color: gray;*/
+    margin-bottom: 35px;
 }
+
 #pfb {
     border-radius: 50%;
-    width: 30%;
-    max-width: 150px;
-    position: absolute;
-    top: 5%;
-    padding: 20px;
+    width: 115px;
+    height: 115px;
+    border: solid white 3px;
+    margin: 10px;
 }
 
 .link {
-    color: rgb(76, 76, 107);
+    color: rgb(213, 213, 247);
 }
 
 .alignBox {
@@ -35,11 +37,24 @@ header {
     flex-flow: wrap;
     justify-content: center;
 }
+.shade {
+    width: 100%;
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+
+}
+
+.headerBox {
+    display: flex;
+}
+.headerBox div {
+    margin: 5px;
+}
 
 .textBox1 {
-    padding: 20px;
-    position: relative;
-    text-align: center;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
 }
 
 .textBox2 {
@@ -57,12 +72,12 @@ header {
     flex-direction: column;
 }
 
+
 .subText {
     color: gray;
 }
 
 .subField {
-    padding: 10px 10px 10px 50px;
     width: 450px;
 }
 
@@ -86,6 +101,7 @@ header {
 }
 
 h1 {
+    margin: 0px 0px 5px 0px;
     font-size: x-large;
 }
 
