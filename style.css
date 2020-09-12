@@ -90,6 +90,7 @@ header {
 .subText {
     color: gray;
     font-size: 10pt;
+    line-height: 1.4;
 }
 
 .subField {
@@ -115,7 +116,7 @@ header {
 }
 
 .volWrapper .colBox {
-    padding: 10px 0px;
+    padding: 5px 0px;
     min-width: 0px;
 }
 
@@ -154,8 +155,10 @@ h2,
 .h2like {
     font-size: 13pt;
     font-weight: normal;
+    margin-bottom: 3px;
 }
-.h2like > h2 {
+
+.h2like>h2 {
     display: inline;
     margin: 0;
     font-weight: bold;
@@ -180,11 +183,13 @@ b {
 }
 
 
-.textField {
+.textField,
+p {
     font-size: 10pt;
     margin-top: 5px;
     margin-bottom: 6px;
     width: 90%;
+    line-height: 1.2;
 }
 
 .refBox {
@@ -210,15 +215,6 @@ b {
     font-size: large;
 }
 
-.Frivillig > *{
-    border-left: 3px solid #bbbbbb80;
-    padding-left: 5px;
-    left: -7px;
-    position: relative;
-    margin: 10px 0px;
-    
-}
-
 .refBox .columnBox {
     opacity: 0%;
     background-color: #a0a0a066;
@@ -229,12 +225,15 @@ b {
 
 }
 
-.lineBox {
+.lineBox, .Frivillig>* {
     border-left: 3px solid #bbbbbb59;
     padding-left: 5px;
     left: -7px;
     position: relative;
     margin: 10px 0px;
+
+    width: 90%;
+    background-color: #cccccc3b;
 }
 
 
