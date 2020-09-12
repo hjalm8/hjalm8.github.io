@@ -102,12 +102,12 @@ header {
     max-height: 44px;
     float: left;
     margin-right: 26px;
+    align-self: center;
 }
 
 .volWrapper .favIcon {
     max-width: 28px;
     max-height: 28px;
-    margin-top: 5px;
     margin-left: 26px;
     margin-right: 16px;
 }
@@ -152,6 +152,11 @@ h2,
 .h2like {
     font-size: 13pt;
     font-weight: normal;
+}
+.h2like > h2 {
+    display: inline;
+    margin: 0;
+    font-weight: bold;
 }
 
 h3 {
