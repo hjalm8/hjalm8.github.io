@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hjalmar Andersen CV</title>
@@ -7,166 +8,225 @@
     <link rel="stylesheet" media="(max-width: 1300px)" href="responsive.css" id="printable">
     <script>
         function switchStyle() {
-            try {
+            try {
                 var doc = document.getElementById('printable')
                 var m = doc.getAttribute("media");
                 if (m === "(max-width: 1300px)") {
-                    doc.setAttribute("media","all")
+                    doc.setAttribute("media", "all")
+                    onHoverBox();
+
+                    var aBox = document.getElementsByClassName("alignBox")[0];
+                    aBox.setAttribute("style", "align-content: center");
+
+                    var ref = document.getElementsByClassName("refBox")[0];
+                    ref.setAttribute("onmouseover", "");
+                    ref.setAttribute("onmouseout", "");
+
                 } else if (m === "all") {
-                    doc.setAttribute("media","(max-width: 1300px)")
+                    doc.setAttribute("media", "(max-width: 1300px)")
+
+                    var aBox = document.getElementsByClassName("alignBox")[0];
+                    aBox.setAttribute("style", "");
+
+                    var ref = document.getElementsByClassName("refBox")[0];
+                    offHoverBox();
+                    ref.setAttribute("onmouseover", "onHoverBox()");
+                    ref.setAttribute("onmouseout", "offHoverBox()");
                 }
-            } finally {
-            }
+            } finally {}
+        }
+
+        function onHoverBox() {
+            var topBar = document.getElementById('hoverTop');
+            var topSpan = document.getElementById('hamburger');
+            var bottomInfo = document.getElementById('hoverBot');
+            topBar.setAttribute("style", "background-color: #a0a0a066;");
+            topSpan.innerHTML = "&#x25CF;";
+            bottomInfo.setAttribute("style", "opacity: 100%");
+        }
+
+        function offHoverBox() {
+            var topBar = document.getElementById('hoverTop');
+            var topSpan = document.getElementById('hamburger');
+            var bottomInfo = document.getElementById('hoverBot');
+            topBar.setAttribute("style", "background-color: #333333b0;");
+            topSpan.innerHTML = "&#x25CB;";
+            bottomInfo.setAttribute("style", "opacity: 0%");
         }
     </script>
 </head>
+
 <body>
     <header>
         <div class="shade">
             <div class="headerBox">
-                <img id="pfb" src="assets/DSC_0054-3.jpeg" alt="Profilbilde" onclick="switchStyle()">
+                <div id="pfbWrapper">
+                    <img id="pfb" src="assets/DSC_0054-3.jpeg" alt="Profilbilde" onclick="switchStyle()">
+                </div>
                 <div class="textBox1">
                     <div class="rowBox">
                         <h1>Hjalmar Svenstrup Andersen<div class="inner"></div>
-                        </h1>Bergen, Vestland <br> 
+                        </h1>Bergen, Vestland <br>
                         <a class="link" href="tel:+47 479 05 198">+47 479 05 198</a>
-                        <a class="link"  href="mail:hjalmar@hey.com">Hjalmar@hey.com</a> 
+                        <a class="link" href="mail:hjalmar@hey.com">Hjalmar@hey.com</a>
                     </div>
+                </div>
+            </div>
+            <div class="refBox" onmouseover="onHoverBox()" onmouseout="offHoverBox()">
+                <div class="hoverBox" id="hoverTop">Referanser:<span id="hamburger">&#x25CB;</span></div>
+                <!-- &#x25CB; &#x25CF;-->
+                <div class="columnBox" id="hoverBot">
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/hjalmarandersen/">LinkedIn</a></li>
+                        <li><span>Oppgis ved forespørsel.</span></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </header>
-
     <div class="alignBox">
-        <div class="rowBox"><div class="textBox2">
-            <div class="subField">
-                    <h1>Utdanning<div class="inner"></div></h1>
-                    <div class="colBox">
-                        <img class="favIcon" src="assets/UiB-logo.jpeg" alt="UiB-logo">
-                        <div class="rowBox">
-                            <div class="h2like">
-                                <b>Bachelore i Informatikk: Datatryggleik</b> ​​—​​ <br>Institutt for Informatikk, Universitetet i Bergen
-                            </div>
-                            <p class="subText">August 2017 - d.d.</p>
-                        </div>
-                    </div>
-                <br>
-            </div>
-        </div>
-        <div class="textBox2">
-            <div class="subField">
-                    <h1>Erfaring<div class="inner"></div></h1>
+        <div class="rowBox">
+            <div class="textBox2">
+                <div class="subField">
+                    <h1>Utdanning<div class="inner"></div>
+                    </h1>
                     <div class="rowBox">
                         <div class="colBox">
-                            <img class="favIcon" src="assets/IG_grey.png" alt="igLogo">
-                            <div class="rowBox">
-                                <div class="h2like">
-                                    <b>IslandGarden AS</b> ​​—​​ App og systemutvikler <br>
-                                    <div class="subText">Bergen og Øygarden</div>
+                            <img class="favIcon" src="assets/UiB-logo.jpeg" alt="UiB-logo">
+                            <div class="lineBox">
+                                <div class="rowBox">
+                                    <div class="h2like">
+                                        <b>Bachelor i Informatikk:</b> Datatryggleik ​​—​​</div>
+                                    <div class="subText">
+                                        Institutt for Informatikk, Universitetet i Bergen<br>
+                                        August 2017 - d.d.
+                                    </div>
                                 </div>
-                                <br>
-                                <div class="subText">Mars 2019 - d.d.</div>
                             </div>
-                        </div>
-                        <div>
-                            <p>Gjennomførte en rekke prosjekter for selskaper på Vestlandet.<br>
-                            Hadde ansvar for å utarbeide, designe, planlegge og overse utviklingen av prosjekter, samt utviklingen av Flutter native apper.
-                            </p>
-                            <h3>Teknologier:</h3>
-                            Flutter, Dart, Firebase, Node.js, RestAPI, Javascript/TypeScript, React.js
-                            <h3>Prosjekter:</h3>
-                            <ul>
-                                <li><b>Bolighjelperen: </b>System for forvaltning, drift og vedlikehold av sameier.</li>
-                                <li><b>Vaktmesterhjelperen: </b>App for vaktmestere til Sartor sine sameier.</li>
-                                <li><b>Spillavhengighet Norge: </b> Brukerregister for Spillavhengighet Norge.</li>
-                                <li><b>DiaKom: </b>En whitelabel løsning for intern dialog og informasjonsflyt i organisasjoner, bedrifter og idrettslag.</li>
-                                <li><b>Poplar: </b>Digitale rebusløp som læringsverktøy for barne- og ungdomsskoler.</li>
-                              </ul>
                         </div>
                     </div>
                     <br>
+                </div>
+            </div>
+            <div class="textBox3">
+                <div class="subField">
+                    <h1>Erfaring<div class="inner"></div>
+                    </h1>
                     <div class="rowBox">
-                        <div class="colBox">
-                            <img class="favIcon" src="assets/UiB-logo.jpeg" alt="UiBLogo">
-                            <div class="rowBox">
-                                <div class="h2like">
-                                    <b>Universitetet i Bergen</b> ​​—​​ Gruppeleder
-                                    <div class="subText">Gruppeleder i INF140: Introduksjon til datatryggleik</div>
+                        <div class="lineBox">
+                            <div class="colBox">
+                                <img class="favIcon" src="assets/IG_grey.png" alt="igLogo">
+                                <div class="rowBox">
+                                    <div class="h2like">
+                                        <b>IslandGarden AS</b> ​​—​​ App og systemutvikler <br>
+                                    </div>
+                                    <div class="subText">Bergen og Øygarden<br>Mars 2019 - d.d.</div>
                                 </div>
-                                <br>
-                                <div class="subText">August 2020 - Desember 2020</div>
+                            </div>
+                            <div class="textField">
+                                <p>Gjennomførte en rekke prosjekter for selskaper på Vestlandet.<br>
+                                    Hadde ansvar for å utarbeide, designe, planlegge og overse utviklingen av prosjekter,
+                                    samt utviklingen av Flutter native apper.
+                                </p>
+                                <b>Teknologier:</b><br>
+                                Flutter, Dart, Firebase, Node.js, RestAPI, Javascript/TypeScript, React.js
+                                <h4>Prosjekter:</h4>
+                                <ul>
+                                    <li><b>Bolighjelperen: </b>System for forvaltning, drift og vedlikehold av sameier.</li>
+                                    <li><b>Vaktmesterhjelperen: </b>App for vaktmestere til Sartor sine sameier.</li>
+                                    <li><b>Spillavhengighet Norge: </b> Brukerregister for Spillavhengighet Norge.</li>
+                                    <li><b>DiaKom: </b>En whitelabel løsning for intern dialog i organisasjoner.</li>
+                                    <li><b>Poplar: </b>Digitale rebusløp som læringsverktøy for barne- og ungdomsskoler.
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div>
-                            <p> Holdt gruppeundervisning for introduksjonsfaget i sikkerhet.<br>
-                                Faget dekker fundamentale sikkerhetsprinsipper, kryptografi, sikkerhetsarkitektur, angrep og best practices innen IT sikkerhet. 
-                            </p>
+                    </div>
+                    <div class="rowBox">
+                        <div class="lineBox">
+                            <div class="colBox">
+                                <img class="favIcon" src="assets/UiB-logo.jpeg" alt="UiBLogo">
+                                <div class="rowBox">
+                                    <div class="h2like">
+                                        <b>Universitetet i Bergen</b> ​​—​​ Gruppeleder
+                                    </div>
+                                    <div class="subText">Gruppeleder i INF140: Introduksjon til datatryggleik<br> 2020 - Desember 2020</div>
+                                </div>
+                            </div>
+                            <div class="textField">
+                                Holdt gruppeundervisning for introduksjonsfaget i sikkerhet.<br>
+                                Faget dekker fundamentale sikkerhetsprinsipper, kryptografi, sikkerhetsarkitektur,
+                                angrep og best practices innen IT sikkerhet.
+                            </div>
                         </div>
                     </div>
+                </div>
             </div>
-        </div></div>
-    
+        </div>
+        <br>
         <div class="rowBox">
             <div class="textBox2">
                 <div class="volWrapper">
-                        <div class="subField">
-                            <h1>Frivillig arbeid og verv<div class="inner"></div></h1>
-                            <div class="rowBox">
-                                <div class="colBox">
-                                    <img class="favIcon" src="assets/javazone.png" alt="logo">
-                                    <div class="rowBox">
-                                        <div class="customHeader"><b>Javazone</b> ​​—​​ Frivillig
-                                        <div class="subText">September 2019</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="colBox">
-                                    <img class="favIcon" src="assets/booster.png" alt="logo">
-                                    <div class="rowBox">
-                                        <div class="customHeader"><b>BoosterConf 2019</b> ​​—​​ Frivillig
-                                        <div class="subText">Mars 2019</div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="subField">
+                        <h1>Frivillig arbeid og verv<div class="inner"></div>
+                        </h1>
+                        <div class="rowBox">
+                            <div class="lineBox">
                                 <div class="colBox">
                                     <img class="favIcon" src="assets/echo.png" alt="logo">
                                     <div class="rowBox">
-                                        <div class="customHeader"><b>Echo Makerspace</b> ​​—​​ Styremedlem
+                                        <div class="customHeader"><b>Echo Makerspace</b> ​​—​​ Styremedlem</div>
                                         <div class="subText">August 2019 - d.d.</div>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="colBox">
                                     <img class="favIcon" src="assets/echo.png" alt="logo">
                                     <div class="rowBox">
                                         <div class="customHeader"><b>Bryggelaget ii</b> ​​—​​ Nestleder
-                                        <div class="subText">August 2019 - d.d.</div>
                                         </div>
+                                        <div class="subText">August 2019 - d.d.</div>
+                                    </div>
+                                </div>
+                                <div class="colBox">
+                                    <img class="favIcon" src="assets/javazone.png" alt="logo">
+                                    <div class="rowBox">
+                                        <div class="customHeader"><b>Javazone</b> ​​—​​ Frivillig
+                                        </div>
+                                        <div class="subText">September 2019</div>
+                                    </div>
+                                </div>
+                                <div class="colBox">
+                                    <img class="favIcon" src="assets/booster.png" alt="logo">
+                                    <div class="rowBox">
+                                        <div class="customHeader"><b>BoosterConf 2019</b> ​​—​​ Frivillig
+                                        </div>
+                                        <div class="subText">Mars 2019</div>
                                     </div>
                                 </div>
                                 <div class="colBox">
                                     <img class="favIcon" src="assets/sammen.png" alt="logo">
                                     <div class="rowBox">
                                         <div class="customHeader"><b>Sammen Studenthjem</b> ​​—​​ Tillitsvalgt
-                                        <div class="subText">Oktober 2017 - Juni 2018</div>
                                         </div>
+                                        <div class="subText">Oktober 2017 - Juni 2018</div>
                                     </div>
                                 </div>
                                 <div class="colBox">
                                     <img class="favIcon" src="assets/moringen.png" alt="logo">
                                     <div class="rowBox">
                                         <div class="customHeader"><b>Moringen Pub</b> ​​—​​ Frivillig
-                                        <div class="subText">2011 - 2019</div>
                                         </div>
+                                        <div class="subText">2011 - 2019</div>
                                     </div>
                                 </div>
                             </div>
-                        
-                        </div>           
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <footer></footer>
 </body>
+
 </html>

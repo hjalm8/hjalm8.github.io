@@ -1,8 +1,9 @@
-html, body
-{
+html,
+body {
     margin: 0px;
     height: 100%;
-    min-width: 700px;
+    min-width: 730px;
+    font-family: Helvetica, sans-serif;
 }
 
 header {
@@ -18,12 +19,19 @@ header {
     margin-bottom: 15px;
 }
 
+#pfbWrapper {
+    border: white solid 5px;
+    border-radius: 50%;
+    width: 105px;
+    height: 105px;
+    margin: 6px;
+}
+
 #pfb {
     border-radius: 50%;
-    width: 115px;
-    height: 115px;
-    border: solid white 3px;
-    margin: 6px;
+    margin: -1px 0px 0px -1px;
+    width: 102%;
+    height: 102%;
 }
 
 .link {
@@ -37,16 +45,19 @@ header {
     flex-flow: wrap;
     justify-content: center;
 }
+
 .shade {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     color: white;
-    background-color: rgba(0,0,0,0.8);
-
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .headerBox {
     display: flex;
 }
+
 .headerBox div {
     margin: 5px;
 }
@@ -57,7 +68,7 @@ header {
     align-items: center;
 }
 
-.textBox2 {
+.textBox2, .textBox3{
     padding: 0px 0px 0px 80px;
     align-self: center;
 }
@@ -67,6 +78,7 @@ header {
     position: relative;
     left: -70px;
 }
+
 .rowBox {
     display: flex;
     flex-direction: column;
@@ -75,6 +87,7 @@ header {
 
 .subText {
     color: gray;
+    font-size: 10pt;
 }
 
 .subField {
@@ -84,26 +97,28 @@ header {
 
 .favIcon {
     border-radius: 10%;
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 44px;
+    max-height: 44px;
     float: left;
-    margin-right: 20px;
+    margin-right: 26px;
 }
 
 .volWrapper .favIcon {
-    max-width: 30px;
-    max-height: 30px;
+    max-width: 28px;
+    max-height: 28px;
     margin-top: 5px;
+    margin-left: 26px;
+    margin-right: 16px;
 }
 
 .volWrapper .colBox {
-    left: -50px;
-    padding: 15px 0px;
+    padding: 10px 0px;
     min-width: 0px;
 }
 
 .volWrapper .subField {
     width: initial;
+    font-size: 10pt;
 }
 
 h1 {
@@ -112,34 +127,100 @@ h1 {
 }
 
 .alignBox h1 {
-    width: 100%;
+    width: 90%;
     display: inline-block;
     opacity: 0.9;
     border-bottom: 3px solid #bbbbbb;
     position: relative;
     left: -70px;
-    padding: 0px 0px 3px 70px;
-}
-
-.alignBox .volWrapper h1 {
-    left: -50px;
-    padding: 0px 0px 3px 50px;
+    padding: 0px 0px 3px 5px;
+    margin-left: 65px;
 }
 
 ul {
     margin-top: 5px;
     padding-left: 20px;
-}
-ul li {
-    padding-bottom: 5px;
+    margin-bottom: 0px;
 }
 
-h2, .h2like {
-    font-size: large;
+ul li {
+    margin-bottom: 5px;
+}
+
+h2,
+.h2like {
+    font-size: 13pt;
     font-weight: normal;
 }
 
 h3 {
     font-size: medium;
     margin-block-end: 5px;
+}
+
+h4 {
+    font-size: 11pt;
+    margin-block-end: 5px;
+}
+
+.customHeader {
+    margin-bottom: 5px;
+}
+
+b {
+    font-size: 101%;
+}
+
+
+.textField {
+    font-size: 10pt;
+    margin-top: 5px;
+    margin-bottom: 6px;
+    width: 90%;
+}
+
+.refBox {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: medium;
+}
+
+.hoverBox {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px 5px 10px;
+    background-color: #333333b0;
+    font-size: large;
+    align-content: center;
+}
+
+#hamburger {
+    text-align: center;
+    font-size: large;
+}
+
+.refBox .columnBox {
+    opacity: 0%;
+    background-color: #a0a0a066;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.lineBox {
+    border-left: 3px solid #bbbbbb59;
+    padding-left: 5px;
+    left: -7px;
+    position: relative;
+    margin: 10px 0px;
+ }
+
+
+a {
+    color: inherit;
 }
