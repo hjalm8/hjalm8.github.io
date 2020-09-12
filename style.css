@@ -204,7 +204,6 @@ p {
     display: flex;
     justify-content: space-between;
     padding: 5px 10px 5px 10px;
-    background-color: #333333b0;
     font-size: large;
     align-content: center;
 }
@@ -216,12 +215,10 @@ p {
 
 .refBox .columnBox {
     opacity: 0%;
-    background-color: #a0a0a066;
     display: flex;
     flex: 1;
     flex-direction: column;
     justify-content: flex-start;
-
 }
 
 .lineBox, .Frivillig > * {
@@ -237,5 +234,14 @@ p {
 
 
 a {
-    color: inherit;
+	color: inherit;
+	margin-bottom: 5px;
+}
+
+#hoverBot > ul {
+	position: relative;
+	left: 7px;
+}
+#hoverBot > ul > li {
+	padding-bottom: 3px;
 }
