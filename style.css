@@ -88,7 +88,7 @@ header {
 
 
 .subText {
-    color: gray;
+    color: rgb(61, 61, 61);
     font-size: 10pt;
     line-height: 1.4;
 }
@@ -100,8 +100,8 @@ header {
 
 .favIcon {
     border-radius: 10%;
-    max-width: 44px;
-    max-height: 44px;
+    max-width: 45px;
+    max-height: 45px;
     float: left;
     margin-right: 26px;
     align-self: center;
@@ -131,7 +131,7 @@ h1 {
 }
 
 .alignBox h1 {
-    width: 90%;
+    width: 455px;
     display: inline-block;
     opacity: 0.9;
     border-bottom: 3px solid #bbbbbb;
@@ -175,6 +175,8 @@ h4 {
 }
 
 .customHeader {
+    font-size: 10pt;
+    margin: 0;
     margin-bottom: 5px;
 }
 
@@ -188,8 +190,8 @@ p {
     font-size: 10pt;
     margin-top: 5px;
     margin-bottom: 6px;
-    width: 90%;
-    line-height: 1.2;
+    margin-right: 15px;
+    line-height: 1.4;
 }
 
 .refBox {
@@ -225,15 +227,15 @@ p {
 
 }
 
-.lineBox, .Frivillig>* {
+.lineBox, .Frivillig > * {
     border-left: 3px solid #bbbbbb59;
     padding-left: 5px;
     left: -7px;
     position: relative;
-    margin: 10px 0px;
-
-    width: 90%;
-    background-color: #cccccc3b;
+    margin: 5px 0px 10px 0px;
+    padding-top: 7px;
+    width: 454px;
+    background-color: #d3cbc429;
 }
 
 
