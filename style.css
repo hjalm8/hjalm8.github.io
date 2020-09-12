@@ -20,6 +20,7 @@ header {
 }
 
 #pfbWrapper {
+    background-color: white;
     border: white solid 5px;
     border-radius: 50%;
     width: 105px;
