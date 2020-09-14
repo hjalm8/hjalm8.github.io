@@ -238,10 +238,6 @@ a {
 	margin-bottom: 5px;
 }
 
-#hoverBot > ul {
-	position: relative;
-	left: 7px;
-}
 #hoverBot > ul > li {
 	padding-bottom: 3px;
 }
