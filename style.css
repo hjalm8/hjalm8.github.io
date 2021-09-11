@@ -79,6 +79,7 @@ header {
     display: flex;
     position: relative;
     left: -70px;
+    margin-right: -70px;
 }
 
 .rowBox {
