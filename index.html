@@ -1,263 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="CV og hjemmeside til Hjalmar S. Andesen">
-    <meta name="keywords"
-        content="CV, Flutter, Bergen, Utvikler, Hjalmar Andersen, Hjalmar Sventrup Andersen, Hjalmar S. Andersen">
-    <meta name="author" content="Hjalmar S. Andersen">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="CV og hjemmeside til Hjalmar S. Andesen"
+    />
+    <meta
+      name="keywords"
+      content="CV, Flutter, Bergen, Utvikler, Hjalmar Andersen, Hjalmar Sventrup Andersen, Hjalmar S. Andersen"
+    />
+    <meta name="author" content="Hjalmar S. Andersen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hjalmar Andersen CV</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" media="(max-width: 1300px)" href="responsive.css" id="printable">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      media="(max-width: 1300px)"
+      href="responsive.css"
+      id="printable"
+    />
     <script>
-        function switchStyle() {
-            try {
-                var doc = document.getElementById('printable')
-                var m = doc.getAttribute("media");
-                if (m === "(max-width: 1300px)") {
-                    doc.setAttribute("media", "all")
-                    onHoverBox();
-                    var ref = document.getElementsByClassName("refBox")[0];
-                    ref.setAttribute("onmouseover", "");
-                    ref.setAttribute("onmouseout", "");
-
-                } else if (m === "all") {
-                    doc.setAttribute("media", "(max-width: 1300px)")
-                    offHoverBox();
-                    var ref = document.getElementsByClassName("refBox")[0];
-                    ref.setAttribute("onmouseover", "onHoverBox()");
-                    ref.setAttribute("onmouseout", "offHoverBox()");
-                }
-            } finally {}
+      function switchStyle() {
+        try {
+          var doc = document.getElementById("printable");
+          var m = doc.getAttribute("media");
+          if (m === "(max-width: 1300px)") {
+            doc.setAttribute("media", "all");
+            onHoverBox();
+            var ref = document.getElementsByClassName("refBox")[0];
+            ref.setAttribute("onmouseover", "");
+            ref.setAttribute("onmouseout", "");
+          } else if (m === "all") {
+            doc.setAttribute("media", "(max-width: 1300px)");
+            offHoverBox();
+            var ref = document.getElementsByClassName("refBox")[0];
+            ref.setAttribute("onmouseover", "onHoverBox()");
+            ref.setAttribute("onmouseout", "offHoverBox()");
+          }
+        } finally {
         }
+      }
 
-        function onHoverBox() {
-            var topBar = document.getElementById('hoverTop');
-            var topSpan = document.getElementById('hamburger');
-            var bottomInfo = document.getElementById('hoverBot');
-            topSpan.innerHTML = "&#x25CF;";
-            bottomInfo.setAttribute("style", "opacity: 100%");
-        }
+      function onHoverBox() {
+        var topBar = document.getElementById("hoverTop");
+        var topSpan = document.getElementById("hamburger");
+        var bottomInfo = document.getElementById("hoverBot");
+        topSpan.innerHTML = "&#x25CF;";
+        bottomInfo.setAttribute("style", "opacity: 100%");
+      }
 
-        function offHoverBox() {
-            var topBar = document.getElementById('hoverTop');
-            var topSpan = document.getElementById('hamburger');
-            var bottomInfo = document.getElementById('hoverBot');
-            topSpan.innerHTML = "&#x25CB;";
-            bottomInfo.setAttribute("style", "opacity: 0%");
-        }
+      function offHoverBox() {
+        var topBar = document.getElementById("hoverTop");
+        var topSpan = document.getElementById("hamburger");
+        var bottomInfo = document.getElementById("hoverBot");
+        topSpan.innerHTML = "&#x25CB;";
+        bottomInfo.setAttribute("style", "opacity: 0%");
+      }
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="shade">
-            <div class="headerBox">
-                <a id="pfbWrapper" href="https://github.com/hjalm8">
-                    <img id="pfb" src="assets/DSC_0054-3.jpeg" alt="Profilbilde">
-                </a>
-                <div class="textBox1">
-                    <div class="rowBox">
-                        <h1>Hjalmar Svenstrup Andersen</h1>
-                        <p>Oslo, Norway</p> 
-                        <a class="link" href="tel:+4747905198">+47 479 05 198</a>
-                        <a class="link" href="mail:hjalmar@hey.com">Hjalmar@hey.com</a>
-                    </div>
-                </div>
+      <div class="shade">
+        <div class="headerBox">
+          <a id="pfbWrapper" href="https://github.com/hjalm8">
+            <img id="pfb" src="assets/DSC_0054-3.jpeg" alt="Profilbilde" />
+          </a>
+          <div class="textBox1">
+            <div class="rowBox">
+              <h1>Hjalmar Svenstrup Andersen</h1>
+              <p>Oslo, Norway</p>
+              <a class="link" href="tel:+4747905198">+47 479 05 198</a>
+              <a class="link" href="mail:hjalmar@hey.com">Hjalmar@hey.com</a>
             </div>
-            <div class="refBox" onmouseover="onHoverBox()" onmouseout="offHoverBox()" onclick="switchStyle()">
-                <div class="hoverBox" id="hoverTop">References:<span id="hamburger">&#x25CB;</span></div>
-                <!-- &#x25CB; &#x25CF;-->
-                <div class="rowBox" id="hoverBot">
-                    <div>
-                        <ul>
-                            <li><a href="https://www.linkedin.com/in/hjalmarandersen/">LinkedIn</a></li>
-                            <li><span>Upon request.</span></li> <br/>
-                        <h3 style="margin-top: 0px">Languages:</h3>
-                            <li>Fluent in Norwegian and English</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div
+          class="refBox"
+          onmouseover="onHoverBox()"
+          onmouseout="offHoverBox()"
+          onclick="switchStyle()"
+        >
+          <div class="hoverBox" id="hoverTop">
+            References:<span id="hamburger">&#x25CB;</span>
+          </div>
+          <!-- &#x25CB; &#x25CF;-->
+          <div class="rowBox" id="hoverBot">
+            <div>
+              <ul>
+                <li>
+                  <a href="https://www.linkedin.com/in/hjalmarandersen/"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li><span>Upon request.</span></li>
+                <br />
+                <h3 style="margin-top: 0px">Languages:</h3>
+                <li>Fluent in Norwegian and English</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <div class="alignBox">
-        <div class="rowBox">
-            <div class="textBox2">
-                <div class="subField">
-                    <h1>Education</h1>
-                    <div class="rowBox">
-                        <div class="lineBox">
-                            <div class="colBox">
-                                <img class="favIcon" src="assets/uio.png" alt="UiB-logo">
-                                <div class="rowBox">
-                                    <div class="h2like">
-                                        <h2>Entrepreneurship and Innovation Management</h2><br/>
-                                        Master's degree 
-                                    </div>
-                                    <div class="subText">
-                                        Department of Informatics, University of Oslo<br>
-                                        August 2021 - June 2023
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lineBox">
-                            <div class="colBox">
-                                <img class="favIcon" src="assets/uib_bw.jpeg" alt="UiB-logo">
-                                <div class="rowBox">
-                                    <div class="h2like">
-                                        <h2>Informatics: Computer Security</h2><br/>
-                                        Bachelor's degree
-                                    </div>
-                                    <div class="subText">
-                                        Department of Informatics, University of Bergen<br>
-                                        August 2017 - June 2021
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+      <div class="rowBox">
+        <div class="textBox2">
+          <div class="subField">
+            <h1>Education</h1>
+            <div class="rowBox">
+              <div class="lineBox">
+                <div class="colBox">
+                  <img class="favIcon" src="assets/uio.png" alt="UiB-logo" />
+                  <div class="rowBox">
+                    <div class="h2like">
+                      <h2>Entrepreneurship and Innovation Management</h2>
+                      <br />
+                      Master's degree
                     </div>
-                    <br>
+                    <div class="subText grey">
+                      Department of Informatics, University of Oslo<br />
+                      August 2021 - June 2023
+                    </div>
+                  </div>
                 </div>
-            </div>
-            <div class="textBox3">
-                <div class="subField">
-                    <h1>Experience
-                    </h1>
-                    <div class="rowBox">
-                        <div class="lineBox">
-                            <div class="colBox">
-                                <img class="favIcon" src="assets/ig_new.png" alt="igLogo">
-                                <div class="rowBox">
-                                    <div class="h2like">
-                                        <h2>IslandGarden AS</h2> ​​—​​ Fullstack developer <br>
-                                    </div>
-                                    <div class="subText">Bergen/Øygarden<br>March 2019 - present</div>
-                                </div>
-                            </div>
-                            <div class="textField">
-
-                                <p>Completed several projects for small businesses in the Hordaland area.<br>
-                                    Responsible for planning, designing, managing and developing projects, mostly developed apps using Flutter.
-                                </p>
-                                <b>Technologies:</b><br>
-                                Flutter, Dart, Firebase, Node.js, RestAPI, Javascript/TypeScript, React.js
-                                <h3>Projects:</h3>
-                                <ul>
-                                    <li><b>Bolighjelperen: </b>System for managing housing cooperatives.</li>
-                                    <li><b>Spillavhengighet Norge: </b> App for members of a national gambling addiction organization.</li>
-                                    <li><b>DiaKom: </b>A whitelabel system for organizations or sports teams</li>
-                                    <li><b>Poplar: </b>Map based quiz game for schools</li>
-                                    <li><b>Fagmøte: </b>System for organizing meetings, talks and courses for doctors and other healthcare professionals.</li>
-
-                                </ul>
-                            </div>
-                        </div>
+              </div>
+              <div class="lineBox">
+                <div class="colBox">
+                  <img
+                    class="favIcon"
+                    src="assets/uib_bw.jpeg"
+                    alt="UiB-logo"
+                  />
+                  <div class="rowBox">
+                    <div class="h2like">
+                      <h2>Informatics: Computer Security</h2>
+                      <br />
+                      Bachelor's degree
                     </div>
-                    <div class="rowBox">
-                        <div class="lineBox">
-                            <div class="colBox">
-                                <img class="favIcon" src="assets/uib_bw.jpeg" alt="UiBLogo">
-                                <div class="rowBox">
-                                    <div class="h2like">
-                                        <h2>University of Bergen</h2> ​​—​​ Teaching Assistant
-                                    </div>
-                                    <div class="subText">
-                                        TA i INF140: Introduction to cybersecurity<br/>
-                                        August 2020 - December 2020
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="textField">
-                                Held classroom sessions where I helped students with course material and weekly exercises. I also hosted a crash course on the subject for Tekna.<br><br>
-                                The course covered the fundamentals of information security, cryptography, security architecture, cyber attacks, threat modeling and general security principles.
-                            </div>
-                        </div>
+                    <div class="subText grey">
+                      Department of Informatics, University of Bergen<br />
+                      August 2017 - June 2021
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+            <br />
+          </div>
         </div>
-        <br>
-        <div class="rowBox">
-            <div class="textBox2">
-                <div class="volWrapper">
-                    <div class="subField">
-                        <h1>Volunteer work og extracurriculars</h1>
-                        <div class="rowBox">
-                            <div class="Frivillig">
-                                <div class="rowBox">
-                                    <div class="colBox">
-                                        <img class="favIcon" src="assets/echo.png" alt="logo">
-                                        <div class="rowBox">
-                                            <h2 class="customHeader">
-                                                <b>Echo Makerspace</b> ​​—​​ Boardmember
-                                            </h2>
-                                            <div class="subText">August 2019 - January 2021.</div>
-                                        </div>
-                                    </div>
-                                    <div class="colBox">
-                                        <img class="favIcon" src="assets/echo.png" alt="logo">
-                                        <div class="rowBox">
-                                            <h2 class="customHeader">
-                                                <b>Bryggelaget ii</b> ​​—​​ Boardmember
-                                            </h2>
-                                            <div class="subText">August 2019 - January 2021</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rowBox">
-                                    <div class="colBox">
-                                        <img class="favIcon" src="assets/javazone.png" alt="logo">
-                                        <div class="rowBox">
-                                            <h2 class="customHeader">
-                                                <b>Javazone 2019</b> ​​—​​ Volunteer
-                                            </h2>
-                                            <div class="subText">September 2019</div>
-                                        </div>
-                                    </div>
-                                    <div class="colBox">
-                                        <img class="favIcon" src="assets/booster.png" alt="logo">
-                                        <div class="rowBox">
-                                            <h2 class="customHeader">
-                                                <b>BoosterConf 2019</b> ​​—​​ Volunteer
-                                            </h2>
-                                            <div class="subText">March 2019</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rowBox">
-                                    <div class="colBox">
-                                        <img class="favIcon" src="assets/sammen.png" alt="logo">
-                                        <div class="rowBox">
-                                            <h2 class="customHeader">
-                                                <b>SIB Studenthjem</b> ​​—​​ Resident Representative
-                                            </h2>
-                                            <div class="subText">October 2017 - June 2018</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rowBox">
-                                    <div class="colBox">
-                                        <img class="favIcon" src="assets/moringen.png" alt="logo">
-                                        <div class="rowBox">
-                                            <h2 class="customHeader">
-                                                <b>Moringen Pub</b> ​​—​​ Volunteer
-                                            </h2>
-                                            <div class="subText">July 2011 - June 2019</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <div class="textBox3">
+          <div class="subField">
+            <h1>Experience</h1>
+
+            <div class="rowBox">
+              <div class="lineBox">
+                <div class="colBox">
+                  <img class="favIcon" src="assets/dropin.jpg" alt="ddLogo" />
+                  <div class="rowBox">
+                    <div class="h2like">
+                      <h2>Dr. Dropin</h2>
+                      ​​—​​ Frontend developer <br />
                     </div>
+                    <div class="subText grey">
+                      Oslo<br />October 2021 - present
+                    </div>
+                  </div>
                 </div>
+                <div class="textField">
+                  <b>Technologies:</b><br />
+                  TypeScript, React, Sanity, Gatsby, Tailwind, Storybook,
+                  DaisyUI
+                </div>
+              </div>
+              <div class="lineBox">
+                <div class="colBox">
+                  <img class="favIcon" src="assets/dnv.png" alt="dnvLogo" />
+                  <div class="rowBox">
+                    <div class="h2like">
+                      <h2>DNV Group Incubator</h2>
+                      ​​—​​ Business developer <br />
+                    </div>
+                    <div class="subText grey">
+                      Høvik<br />August 2022 - December 2022
+                    </div>
+                  </div>
+                </div>
+                <div class="textField">
+                  Internship through UiO, 3 days a week. Conducted market
+                  research potential opportunities created by the EU AI Act.
+                </div>
+              </div>
+              <div class="rowBox">
+                <div class="lineBox">
+                  <div class="colBox">
+                    <img class="favIcon" src="assets/ig_new.png" alt="igLogo" />
+                    <div class="rowBox">
+                      <div class="h2like">
+                        <h2>IslandGarden AS</h2>
+                        ​​—​​ Fullstack developer <br />
+                      </div>
+                      <div class="subText grey">
+                        Bergen/Øygarden<br />March 2019 - November 2021
+                      </div>
+                    </div>
+                  </div>
+                  <div class="textField">
+                    <b>Technologies:</b><br />
+                    Flutter, Dart, Firebase, Node.js, RestAPI,
+                    Javascript/TypeScript, React.js
+                  </div>
+                </div>
+              </div>
+              <div class="rowBox">
+                <div class="lineBox">
+                  <div class="colBox">
+                    <img
+                      class="favIcon"
+                      src="assets/uib_bw.jpeg"
+                      alt="UiBLogo"
+                    />
+                    <div class="rowBox">
+                      <div class="h2like">
+                        <h2>University of Bergen</h2>
+                        ​​—​​ Teaching Assistant
+                      </div>
+                      <div class="subText grey">
+                        TA i INF140: Introduction to cybersecurity<br />
+                        August 2020 - December 2020
+                      </div>
+                    </div>
+                  </div>
+                  <div class="textField">
+                    Held classroom sessions where I helped students with course
+                    material and weekly exercises.<br />
+                    Hosted a crash course for Tekna members on the course.<br />
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="textBox3">
+          <div class="subField">
+            <h1>Volunteering</h1>
+            <div class="rowBox">
+              <div class="lineBox">
+                <div class="colBox">
+                  <img class="favIcon" src="assets/uio.png" alt="ddLogo" />
+                  <div class="rowBox">
+                    <div class="h3like">
+                      <h3>UiO Department of Informatics</h3>
+                      ​​—​​ Department Board
+                    </div>
+                    <div class="subText">
+                      <span class="grey">2021 - 2022</span> Board member ​—​
+                      Student Representative
+                    </div>
+                    <div class="subText">
+                      <span class="grey">2022 - 2023</span> Deputy board member
+                      ​—​ Student Representative
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rowBox">
+                <div class="lineBox">
+                  <div class="colBox">
+                    <img
+                      class="favIcon"
+                      src="assets/uib_bw.jpeg"
+                      alt="igLogo"
+                    />
+                    <div class="rowBox">
+                      <div class="h3like">
+                        <h3>UiB Department of Informatics</h3>
+                        ​​—​​ Department Council<br />
+                      </div>
+                      <div class="subText">
+                        <span class="grey">2019 - 2021</span> Deputy board
+                        member ​—​ Student Representative
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rowBox">
+                <div class="lineBox">
+                  <div class="colBox">
+                    <img class="favIcon" src="assets/echo.png" alt="igLogo" />
+                    <div class="rowBox">
+                      <div class="h3like">
+                        <h3>Echo</h3>
+                        ​​—​​ Linjeforeningen for informatikk (UiB)
+                        <br />
+                      </div>
+                      <div class="subText">
+                        <span class="grey">2019 - 2021</span> Boardmember of
+                        Echo Makerspace
+                      </div>
+                      <div class="subText">
+                        <span class="grey">2019 - 2021</span> Boardmember of
+                        Bryggelaget ii
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rowBox">
+                <div class="lineBox">
+                  <div class="colBox">
+                    <img
+                      class="favIcon"
+                      src="assets/booster.png"
+                      alt="igLogo"
+                    />
+                    <div class="rowBox">
+                      <div class="h3like">
+                        <h3>Booster Conference 2019</h3>
+                        ​​—​​ Volunteer
+                      </div>
+                      <div class="subText">
+                        Booster is a software conference for developers, project
+                        managers, architects, UX professionals, testers or
+                        security professionals.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rowBox">
+                <div class="lineBox">
+                  <div class="colBox">
+                    <img
+                      class="favIcon"
+                      src="assets/javazone.png"
+                      alt="igLogo"
+                    />
+                    <div class="rowBox">
+                      <div class="h3like">
+                        <h3>Javazone Conference 2019</h3>
+                        ​​—​​ Volunteer<br />
+                      </div>
+                      <div class="subText">
+                        JavaZone is one of the world's largest community driven
+                        IT conferences.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <footer></footer>
-</body>
-
+    <br />
+    <br />
+    <br />
+  </body>
 </html>
